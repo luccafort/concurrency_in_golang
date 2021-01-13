@@ -69,3 +69,14 @@ func main() {
 // 	salutation, ok := <-stringStream
 // 	fmt.Printf("(%v): %v", ok, salutation)
 // }
+
+// using closed chan
+// func main() {
+// 	// $ go run main.go
+// 	// (false): 0
+// 	intStream := make(chan int)
+// 	close(intStream)
+
+// 	integer, ok := <-intStream
+// 	fmt.Printf("(%v): %v", ok, integer)
+// }
