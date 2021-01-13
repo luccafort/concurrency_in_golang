@@ -56,3 +56,16 @@ func main() {
 
 // 	fmt.Println(<-stringStream)
 // }
+
+// received two returned variables by chan
+// func main() {
+// 	// $ go run main.go
+// 	// (true): Hello, channels!%
+// 	stringStream := make(chan string)
+// 	go func() {
+// 		stringStream <- "Hello, channels!"
+// 	}()
+
+// 	salutation, ok := <-stringStream
+// 	fmt.Printf("(%v): %v", ok, salutation)
+// }
