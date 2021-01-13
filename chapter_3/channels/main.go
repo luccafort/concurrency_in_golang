@@ -35,3 +35,24 @@ func main() {
 // 	<-writeStream
 // 	readStream <- struct{}{}
 // }
+
+// p.68
+// dead lock
+// func main() {
+// 	// $ go run main.go
+// 	// fatal error: all goroutines are asleep - deadlock!
+// 	//
+// 	// goroutine 1 [chan receive]:
+// 	// main.main()
+// 	//         /Users/konishi.tatsuro/github.com/luccafort/concurrency_in_golang/chapter_3/channels/main.go:50 +0x7c
+// 	// exit status 2
+// 	stringStream := make(chan string)
+// 	go func() {
+// 		if 0 != 1 {
+// 			return
+// 		}
+// 		stringStream <- "Hello, channels!"
+// 	}()
+
+// 	fmt.Println(<-stringStream)
+// }
